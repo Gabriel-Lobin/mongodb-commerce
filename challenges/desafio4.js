@@ -6,6 +6,6 @@ db.produtos.update(
 );
 
 db.produtos.find(
-    {},
+    { ultimaModificacao: { $exists: true } },
     { nome: true, _id: false },
 );
