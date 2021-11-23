@@ -1,6 +1,6 @@
-db.produtos.count(
+db.produtos.find(
   { 
     $expr: { $gt: ["$curtidas", "$vendidos"] },
   },
-  { vendidos: true, curtidas: true, _id: false }, 
+  { nome: true, _id: false }, 
 );
