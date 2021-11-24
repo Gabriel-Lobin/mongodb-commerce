@@ -1,11 +1,11 @@
 db.produtos.updateMany(
   { },
   { $rename: {
-    "descricao": "descricaoSite",
+    descricao: "descricaoSite",
   } },
 );
 
 db.produtos.find(
   {},
-  {nome: true, descricao: true, descricaoSite: true ,_id: false },
+  { nome: true, descricao: true, descricaoSite: true, _id: false },
 );
